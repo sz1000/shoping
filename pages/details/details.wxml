@@ -1,0 +1,26 @@
+<view class="home">
+  <view class="list" wx:for="{{list}}" wx:key="id" data-index="{{index}}" bindtap="todetails">
+    <image class="img" src="{{item.pic}}" class="slide-image" mode="aspectFill" lazy-load="true" />
+    <text class="name" class="name">{{item.name}}</text>
+    <text class="minPrice">{{item.minPrice}}</text>
+    <template data="{{...item}}"></template>
+  </view>
+  <view class="foot">
+    <view class="item">
+      <view class="icon"></view>
+      <view>客服</view>
+      <button class="btn" open-type="contact"></button>
+    </view>
+    <view class="item">
+      <view class="icon"></view>
+      <view>分享</view>
+      <button class="btn" open-type="share"></button>
+    </view>
+    <navigator open-type="switchTab" url="/pages/cart/cart" class="item">
+      <view class="icon"></view>
+      <view>购物车</view>
+    </navigator>
+    <view bindtap="addCart" class="item addCart">加入购物车</view>
+    <view class="item buy">立即购买</view>
+  </view>
+</view>

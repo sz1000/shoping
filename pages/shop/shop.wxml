@@ -1,0 +1,8 @@
+<view class="home">
+  <view class="item" wx:for="{{shopList}}" wx:key="id" data-id="{{item.id}}" bindtap="todetails">
+    <image class="img" src="{{item.pic}}" class="slide-image" mode="aspectFill" lazy-load="true" />
+    <text class="name" class="name">{{item.name}}</text>
+    <text class="minPrice">{{item.minPrice}}</text>
+    <template data="{{...item}}"></template>
+  </view>
+</view>
